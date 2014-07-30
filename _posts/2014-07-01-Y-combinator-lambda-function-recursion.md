@@ -125,13 +125,13 @@ $$
 		\lambda x.\lambda y.ab\lambda z.z = (\lambda x. (\lambda y. ((ab)\lambda z.z))) \\\
 	$$
 
-	+ 再來個Currying 定義： $\lambda x_1x_2...x_n. M = (\lambda x_1. (\lambda x_2. (... (\lambda x_n. M))))$。
+	+ 再來個Currying 定義： $\lambda x\_1x\_2...x\_n. M = (\lambda x\_1. (\lambda x\_2. (... (\lambda x\_n. M))))$。
 
 * 語法全等：
 	+ lambda terms的語法全等寫作： $M \equiv N$ 
 	+ 表示的是M和N有完全相同的`結構`.  $\Rightarrow$
 	+ MN  $\equiv$ PQ $\Rightarrow$ M $\equiv$ P 且 N $\equiv Q$ 
-	+ 如果是function abstraction的話，那麽  $\lambda x. M \equiv \lambda y. N \Rightarrow x \equiv y  \ \& \ M \equiv N $
+	+ 如果是function abstraction的話，那麽  $\lambda x. M \equiv \lambda y. N \Rightarrow x \equiv y  \ & \ M \equiv N $
 
 * 替換 &bull; preparation：
 	+ lgh(M) := 所有原子在M中出現的次數。
