@@ -117,9 +117,23 @@ $$
 
 $$
     S = \frac{1}{2}(2r\alpha+2r\beta+2r\gamma); \\\
-    \rho = \alpha + \beta + \gamma; \\\
-    Then \\\
+    \rho = \alpha + \beta + \gamma;
+$$
 
+>Then
+
+$$
+    S = \frac{1}{2}r(a+b+c) = r\rho \\\
+    r^2\rho^2 = (\rho-a)(\rho-b)(\rho-c)\rho \\\
+    r^2\rho = (\rho-a)(\rho-b)(\rho-c) \\\
+    r = \sqrt{\frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}} \\\
+$$
+
+> 我们基于海伦公式找到了园的内心
+
+$$
+    \frac{S_o}{S_t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{\rho}
+$$
 
 $$
 
