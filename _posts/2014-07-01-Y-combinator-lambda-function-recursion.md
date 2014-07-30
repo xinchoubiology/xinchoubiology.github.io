@@ -22,7 +22,7 @@ tags: [lambda_calculus, recursion, combinator]
 	     painter
 	     (let ((smaller (right-split painter (- n 1))))
 	     	 (beside painter (below smaller smaller)))))
-```lisp
+```
 
 結果如下圖：
 

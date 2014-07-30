@@ -5,16 +5,16 @@
 
   
   <url>
-    <loc>/example/2014-04/this-is-example.html</loc>
+    <loc>/internet/2014-07/support-pygments-in-jekyll.html</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2014-04-17T00:00:00+08:00</lastmod>
+    <lastmod>2014-07-31T00:00:00+08:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>/internet/2013-08/support-pygments-in-jekyll.html</loc>
+    <loc>/lambda_calculus/2014-07/Y-combinator-lambda-function-recursion.html</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2013-08-13T00:00:00+08:00</lastmod>
+    <lastmod>2014-07-01T00:00:00+08:00</lastmod>
     <priority>0.8</priority>
   </url>
   

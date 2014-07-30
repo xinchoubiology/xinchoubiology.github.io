@@ -4,7 +4,7 @@
   <title>macrobellevue</title>
   <link href="//atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2014-07-30T23:18:33+08:00</updated>
+  <updated>2014-07-31T01:43:59+08:00</updated>
   <id></id>
   <author>
     <name>XIN ZHOU</name>
@@ -12,41 +12,10 @@
 
   
   <entry>
-    <title>这是一篇示例文章</title>
-    <link href="/example/2014-04/this-is-example.html"/>
-    <updated>2014-04-17T00:00:00+08:00</updated>
-    <id>/example/2014-04/this-is-example</id>
-    <content type="html">示例标题
-示例代码库
-
-
-
-
-
-头1
-头2
-头3
-
-
-
-行1
-行1
-行1
-
-
-行2
-行2
-行2
-
-
-</content>
-  </entry>
-  
-  <entry>
     <title>Jekyll 中的语法高亮：Pygments</title>
-    <link href="/internet/2013-08/support-pygments-in-jekyll.html"/>
-    <updated>2013-08-13T00:00:00+08:00</updated>
-    <id>/internet/2013-08/support-pygments-in-jekyll</id>
+    <link href="/internet/2014-07/support-pygments-in-jekyll.html"/>
+    <updated>2014-07-31T00:00:00+08:00</updated>
+    <id>/internet/2014-07/support-pygments-in-jekyll</id>
     <content type="html">Jekyll 原生支持语法高亮工具 Pygments ，Pygments 支持多种语言高亮。
 
 安装
@@ -69,6 +38,21 @@ mardown: redcarpet
 
 进到我们的网站目录，运行
 $ pygmenti...</content>
+  </entry>
+  
+  <entry>
+    <title>Y-combinator：lambda function&#39;s recursion</title>
+    <link href="/lambda_calculus/2014-07/Y-combinator-lambda-function-recursion.html"/>
+    <updated>2014-07-01T00:00:00+08:00</updated>
+    <id>/lambda_calculus/2014-07/Y-combinator-lambda-function-recursion</id>
+    <content type="html">
+緣起 - 還是要從最近玩的一個比較有意思的Toy說起，『DrRacket』, 涉及到兩個叠代的繪圖 procedure,
+    而我希望做的工作就是對這兩個叠代split procedure 函數做一個 high-order abstraction。其實對於瞭解Y-combinator的來說，一拉到底爺就可以了，最後有個關於lambda recursion基於Y-combinator的實現。
+
+
+
+
+首先，我得到四種遞歸畫圖的procudure, 他們分別被命名為：right-split,    up-split,    left-split,   down-split, 代表圖像叠...</content>
   </entry>
   
 
