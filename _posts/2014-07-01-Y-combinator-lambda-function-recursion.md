@@ -131,7 +131,7 @@ $$
 	+ lambda terms的語法全等寫作： $M \equiv N$ 
 	+ 表示的是M和N有完全相同的`結構`.  $\Rightarrow$
 	+ MN  $\equiv$ PQ $\Rightarrow$ M $\equiv$ P 且 N $\equiv Q$ 
-	+ 如果是function abstraction的話，那麽  $\lambda x. M \equiv \lambda y. N \Rightarrow x \equiv y  \& $
+	+ 如果是function abstraction的話，那麽  $\lambda x. M \equiv \lambda y. N \Rightarrow x \equiv y  \\& $
 
 * 替換 &bull; preparation：
 	+ lgh(M) := 所有原子在M中出現的次數。
