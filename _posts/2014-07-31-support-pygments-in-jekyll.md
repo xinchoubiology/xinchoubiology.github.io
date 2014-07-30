@@ -94,6 +94,8 @@ int main(int argc, char **argv)
             (else (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
+同时，我们也让这个Blog support LaTeX，based on mathjax & redcarpet
+
 $$
     x + y 
 $$
@@ -129,7 +131,7 @@ $$
     r = \sqrt{\frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}} \\\
 $$
 
-> 我们基于海伦公式找到了园的内心
+> 我们基于海伦公式找到了圆的内心
 
 $$
     中文可以吗？
