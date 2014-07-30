@@ -138,7 +138,8 @@ $$
     \frac{S\_o}{S\_t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{\rho}
 $$
 
-$$x + y$$ 是什么
+
+$x + y$ 是什么
 
 参考：
 
