@@ -97,7 +97,7 @@ $$
 	x \mapsto (y \mapsto x - y)   \Rightarrow \lambda x.(\lambda y. x - y) 
 $$
 
-如果我們給這個匿名函數一個名字叫$$h^*$$, 的話，我們發現原來的 $$h(x, y) \rightarrow (h^*(x))(y) $$ 。 換句話說，我們把一個以數的函數映射成一個函數的函數，也就是我們常常說的「高階函數」（high-order function）。
+如果我們給這個匿名函數一個名字叫$$h^*$$, 的話，我們發現原來的 $h(x, y) \rightarrow (h^*(x))(y) $。 換句話說，我們把一個以數的函數映射成一個函數的函數，也就是我們常常說的「高階函數」（high-order function）。
 
 我們把這種將多參數函數轉化成單參數的高階函數的過程，叫做Currying(柯裏化)。寫作 $$((\lambda xy. x - y) x y) \equiv (((\lambda x. (\lambda y. x - y)) a) b)$$.
 
