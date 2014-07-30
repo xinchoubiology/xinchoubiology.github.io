@@ -94,6 +94,10 @@ int main(int argc, char **argv)
             (else (+ (fib (- n 1)) (fib (- n 2))))))
 ```
 
+$$
+    x + y
+$$
+
 参考：
 
 * [http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/](http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/)

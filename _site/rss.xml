@@ -4,8 +4,8 @@
     <title>macrobellevue</title>
     <description>A blog focus on algorithm of structure and genomics</description>
     <link>/rss.xml</link>
-    <lastBuildDate>Wed, 30 Jul 2014 20:52:23 +0800</lastBuildDate>
-    <pubDate>Wed, 30 Jul 2014 20:52:23 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Jul 2014 22:38:03 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Jul 2014 22:38:03 +0800</pubDate>
     <ttl>1800</ttl>
 
     
@@ -38,6 +38,91 @@
       <link>/example/2014-04/this-is-example.html</link>
       <guid>/example/2014-04/this-is-example</guid>
       <pubDate>Thu, 17 Apr 2014 00:00:00 +0800</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[Jekyll 中的语法高亮：Pygments]]></title>
+      <description>&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 原生支持语法高亮工具 &lt;a href=&quot;http://pygments.org/&quot;&gt;Pygments&lt;/a&gt; ，Pygments 支持&lt;a href=&quot;http://pygments.org/docs/lexers/&quot;&gt;多种语言高亮&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4&gt;安装&lt;/h4&gt;
+
+&lt;p&gt;假设你已经能正常运行 Jekyll (&lt;a href=&quot;/internet/2013-07/jekyll-install.html&quot;&gt;安装方法&lt;/a&gt;)。&lt;/p&gt;
+
+&lt;p&gt;下面安装pygments ( 如果你同样使用archlinux的话 )&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ sudo pacman -S python2-pygments
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;安装pygments.rb&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ gem install pygments.rb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;配置&lt;/h4&gt;
+
+&lt;p&gt;在 Jekyll 的配置文件 &lt;strong&gt;_config.yml&lt;/strong&gt; 中设置打开 Pygments&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;pygments: true
+mardown: redcarpet
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;进到我们的网站目录，运行&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;$ pygmentize -S default -f html &amp;gt; your/path/pygments.css
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;生成的样式文件加到我们的网页中&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/your/path/pygments.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;使用&lt;/h4&gt;
+
+&lt;p&gt;语法高亮的代码片段要放在标签对 &lt;code&gt;{% highlight language %}&lt;/code&gt; 和 &lt;code&gt;{% endhighlight %}&lt;/code&gt; 之间，其中的 language 为&lt;a href=&quot;http://pygments.org/docs/lexers/&quot;&gt;多种语言高亮&lt;/a&gt;页面中的 &lt;strong&gt;Short names&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;{% highlight c %}
+/* hello world demo */
+#include &amp;lt;stdio.h&amp;gt;
+int main(int argc, char **argv)
+{
+    printf(&amp;quot;Hello, World!\n&amp;quot;);
+    return 0;
+}
+{% endhighlight %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;也可以采用这样的写法&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;```c
+/* hello world demo */
+#include &amp;lt;stdio.h&amp;gt;
+int main(int argc, char **argv)
+{
+    printf(&amp;quot;Hello, World!\n&amp;quot;);
+    return 0;
+}
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;生成的 html 高亮结果&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;c language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/* hello world demo */&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Hello, World!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lisp language-lisp&quot; data-lang=&quot;lisp&quot;&gt;&lt;span class=&quot;c1&quot;&gt;;;; this is a fibonacci sequence&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cond&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;$$
+    x + y
+$$&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/&quot;&gt;http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <link>/internet/2013-08/support-pygments-in-jekyll.html</link>
+      <guid>/internet/2013-08/support-pygments-in-jekyll</guid>
+      <pubDate>Tue, 13 Aug 2013 00:00:00 +0800</pubDate>
     </item>
     
   </channel>

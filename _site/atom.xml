@@ -4,7 +4,7 @@
   <title>macrobellevue</title>
   <link href="//atom.xml" rel="self"/>
   <link href=""/>
-  <updated>2014-07-30T20:52:23+08:00</updated>
+  <updated>2014-07-30T22:38:03+08:00</updated>
   <id></id>
   <author>
     <name>XIN ZHOU</name>
@@ -40,6 +40,35 @@
 
 
 </content>
+  </entry>
+  
+  <entry>
+    <title>Jekyll 中的语法高亮：Pygments</title>
+    <link href="/internet/2013-08/support-pygments-in-jekyll.html"/>
+    <updated>2013-08-13T00:00:00+08:00</updated>
+    <id>/internet/2013-08/support-pygments-in-jekyll</id>
+    <content type="html">Jekyll 原生支持语法高亮工具 Pygments ，Pygments 支持多种语言高亮。
+
+安装
+
+假设你已经能正常运行 Jekyll (安装方法)。
+
+下面安装pygments ( 如果你同样使用archlinux的话 )
+$ sudo pacman -S python2-pygments
+
+
+
+安装pygments.rb
+$ gem install pygments.rb
+
+配置
+
+在 Jekyll 的配置文件 _config.yml 中设置打开 Pygments
+pygments: true
+mardown: redcarpet
+
+进到我们的网站目录，运行
+$ pygmenti...</content>
   </entry>
   
 

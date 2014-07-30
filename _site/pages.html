@@ -1,4 +1,33 @@
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <!DOCTYPE html>
 <html lang="zh">
   <head>
@@ -136,6 +165,35 @@
     <div class="container">
       <div class="content">
         
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <div class="row">
 
           <article class="col-md-9 main-contenter">
@@ -235,6 +293,10 @@
 
   
      
+    	<li><a href="/categories.html#internet-ref">
+    		internet <span>1</span>
+    	</a></li>
+     
     	<li><a href="/categories.html#example-ref">
     		example <span>1</span>
     	</a></li>
@@ -252,6 +314,8 @@
         <ul>
         
           <li><a href="/example/2014-04/this-is-example.html">这是一篇示例文章</a></li>
+        
+          <li><a href="/internet/2013-08/support-pygments-in-jekyll.html">Jekyll 中的语法高亮：Pygments</a></li>
         
         </ul>
       </section>
@@ -294,14 +358,20 @@
         timeout: 2000 // set the timeout to n secends
     });
     </script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     
 
+    <hr>
+    <hr>
     <div class="container">
-      <div class="content" width="60%">
-        
+      <div class="content">
+        <div class="col-md-9 main-contenter">
+          
 
 
-  <div id="disqus_thread" width="60%"></div>
+  <div id="disqus_thread" width="50"></div>
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'Xinchoubiology'; // required: replace example with your forum shortname
@@ -320,15 +390,17 @@
 
 
 
-        
+          
 
-        
+          
 
+        </div>
       </div>
-      <footer class="text-left">
+    </div>
+
+      <footer align="center">
       <p>&copy; 2014 <a href="/" target="_blank">XIN ZHOU</a>. with Help from <a href="http://jekyllbootstrap.com/" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></p>
       </footer>
-    </div>
 
 
   </body>

@@ -1,4 +1,33 @@
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <!DOCTYPE html>
 <html lang="zh">
   <head>
@@ -136,6 +165,35 @@
     <div class="container">
       <div class="content">
         
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <div class="row">
 
           <article class="col-md-9 main-contenter">
@@ -172,6 +230,34 @@
   </div>
 </div>
 
+<div class="wrapper">
+  <h2 class="h2 entry-title"><a href="/internet/2013-08/support-pygments-in-jekyll.html">Jekyll 中的语法高亮：Pygments</a></h2>
+  
+  <p><a href="http://jekyllrb.com/">Jekyll</a> 原生支持语法高亮工具 <a href="http://pygments.org/">Pygments</a> ，Pygments 支持<a href="http://pygments.org/docs/lexers/">多种语言高亮</a>。</p>
+
+<h4>安装</h4>
+
+<p>假设你已经能正常运行 Jekyll (<a href="/internet/2013-07/jekyll-install.html">安装方法</a>)。</p>
+
+<p>下面安装pygments ( 如果你同样使用archlinux的话 )</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ sudo pacman -S python2-pygments
+</code></pre></div>
+
+  
+
+  <div class="status">
+    <div class="col-md-10 meta visible-lg visible-md">
+      <span class="glyphicon glyphicon-calendar"></span><p>13 Aug 2013</p>
+      <span class="glyphicon glyphicon-tags"></span> <a href="/tags.html#Jekyll-ref" title="Jekyll"><p>Jekyll</p></a><a href="/tags.html#Pygments-ref" title="Pygments"><p>Pygments</p></a><a href="/tags.html#Python-ref" title="Python"><p>Python</p></a>
+      <span class="glyphicon glyphicon-comment"></span><a href="/internet/2013-08/support-pygments-in-jekyll.html#comments"><p>Comments<span class="ds-thread-count" data-thread-key="/internet/2013-08/support-pygments-in-jekyll" data-count-type="comments"></span></p></a>
+    </div>
+    
+    <a class="btn btn-primary btn-sm pull-right" href="/internet/2013-08/support-pygments-in-jekyll.html"><span class="readmore">Read More &raquo; </span></a>
+    
+    <div class="clearfix"></div>
+  </div>
+</div>
+
 
 <!-- Pagination links -->
 <div class="pull-right">
@@ -199,6 +285,10 @@
 
   
      
+    	<li><a href="/categories.html#internet-ref">
+    		internet <span>1</span>
+    	</a></li>
+     
     	<li><a href="/categories.html#example-ref">
     		example <span>1</span>
     	</a></li>
@@ -216,6 +306,8 @@
         <ul>
         
           <li><a href="/example/2014-04/this-is-example.html">这是一篇示例文章</a></li>
+        
+          <li><a href="/internet/2013-08/support-pygments-in-jekyll.html">Jekyll 中的语法高亮：Pygments</a></li>
         
         </ul>
       </section>
@@ -258,14 +350,20 @@
         timeout: 2000 // set the timeout to n secends
     });
     </script>
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     
 
+    <hr>
+    <hr>
     <div class="container">
-      <div class="content" width="60%">
-        
+      <div class="content">
+        <div class="col-md-9 main-contenter">
+          
 
 
-  <div id="disqus_thread" width="60%"></div>
+  <div id="disqus_thread" width="50"></div>
 <script type="text/javascript">
     var disqus_developer = 1;
     var disqus_shortname = 'Xinchoubiology'; // required: replace example with your forum shortname
@@ -284,15 +382,17 @@
 
 
 
-        
+          
 
-        
+          
 
+        </div>
       </div>
-      <footer class="text-left">
+    </div>
+
+      <footer align="center">
       <p>&copy; 2014 <a href="/" target="_blank">XIN ZHOU</a>. with Help from <a href="http://jekyllbootstrap.com/" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a></p>
       </footer>
-    </div>
 
 
   </body>

@@ -32,9 +32,9 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title>Categories - macrobellevue</title>
-    
-    <meta name="keywords" content="Computational Biology, Python, R, Lisp, C++, C & Algorithm">
+    <title>Jekyll 中的语法高亮：Pygments - macrobellevue</title>
+    <meta name="description" content="在 Jekyll 中的语法高亮：pygments">
+    <meta name="keywords" content="jekyll, pygments, 高亮">
     <meta name="author" content="XIN ZHOU">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- HTML5 shim, for IE6-8 support of HTML elements -->
@@ -46,7 +46,7 @@
     <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" media="all">
 
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="canonical" href="/categories.html">
+    <link rel="canonical" href="/internet/2013-08/support-pygments-in-jekyll.html">
     <!-- fav and touch icons -->
     <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.png">
@@ -108,7 +108,7 @@
     
       
       	
-      	<li class="active"><a href="/categories.html" class="active">Categories</a></li>
+      	<li><a href="/categories.html">Categories</a></li>
       	
       
     
@@ -194,138 +194,129 @@
 </script>
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <div class="row">
+<div class="row">
 
-          <article class="col-md-9 main-contenter">
-            <div id="search-loader" style="display:none;text-align:center">
-              <img src="/assets/themes/havee/images/loading.gif">
-            </div>
-            <div class="page-header-wrapper">
-              <div class="page-header">
-                <h2>Categories </h2>
-              </div>
-            </div>
-            
+  <article class="col-md-12 main-contenter">
+    <div id="search-loader" style="display:none;text-align:center">
+      <img src="/assets/themes/havee/images/loading.gif">
+    </div>
+    <div class="page-header">
+      <h2>
+        Jekyll 中的语法高亮：Pygments
+        
+      </h2>
+	  <div class="bottom">
+		<span class="glyphicon glyphicon-user"></span><p>XIN ZHOU</p>
+	    <span class="glyphicon glyphicon-calendar"></span><p>13 Aug 2013</p>
+		<span class="glyphicon glyphicon-folder-open"></span> <a href="/categories.html#internet-ref" title="internet"><p>internet</p></a>
+		<span class="glyphicon glyphicon-tags"></span> <a href="/tags.html#Jekyll-ref" title="Jekyll"><p>Jekyll</p></a><a href="/tags.html#Pygments-ref" title="Pygments"><p>Pygments</p></a><a href="/tags.html#Python-ref" title="Python"><p>Python</p></a>
+      </div>
+    </div>
+    <div class="wrapper"><p><a href="http://jekyllrb.com/">Jekyll</a> 原生支持语法高亮工具 <a href="http://pygments.org/">Pygments</a> ，Pygments 支持<a href="http://pygments.org/docs/lexers/">多种语言高亮</a>。</p>
 
-<ul class="tag_box list-inline">
-  
-  
+<h4>安装</h4>
 
+<p>假设你已经能正常运行 Jekyll (<a href="/internet/2013-07/jekyll-install.html">安装方法</a>)。</p>
 
-  
-     
-    	<li><a href="/categories.html#internet-ref">
-    		internet <span>1</span>
-    	</a></li>
-     
-    	<li><a href="/categories.html#example-ref">
-    		example <span>1</span>
-    	</a></li>
-    
-  
+<p>下面安装pygments ( 如果你同样使用archlinux的话 )</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ sudo pacman -S python2-pygments
+</code></pre></div>
+<!-- more -->
 
+<p>安装pygments.rb</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ gem install pygments.rb
+</code></pre></div>
+<h4>配置</h4>
 
-</ul>
+<p>在 Jekyll 的配置文件 <strong>_config.yml</strong> 中设置打开 Pygments</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">pygments: true
+mardown: redcarpet
+</code></pre></div>
+<p>进到我们的网站目录，运行</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">$ pygmentize -S default -f html &gt; your/path/pygments.css
+</code></pre></div>
+<p>生成的样式文件加到我们的网页中</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;/your/path/pygments.css&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<h4>使用</h4>
 
+<p>语法高亮的代码片段要放在标签对 <code>{% highlight language %}</code> 和 <code>{% endhighlight %}</code> 之间，其中的 language 为<a href="http://pygments.org/docs/lexers/">多种语言高亮</a>页面中的 <strong>Short names</strong>。</p>
 
- 
-<h2 id="internet-ref">internet</h2>
+<div class="highlight"><pre><code class="text">{% highlight c %}
+/* hello world demo */
+#include &lt;stdio.h&gt;
+int main(int argc, char **argv)
+{
+    printf(&quot;Hello, World!\n&quot;);
+    return 0;
+}
+{% endhighlight %}
+</code></pre></div>
+
+<p>也可以采用这样的写法</p>
+
+<div class="highlight"><pre><code class="text">```c
+/* hello world demo */
+#include &lt;stdio.h&gt;
+int main(int argc, char **argv)
+{
+    printf(&quot;Hello, World!\n&quot;);
+    return 0;
+}
+```
+</code></pre></div>
+
+<p>生成的 html 高亮结果</p>
+<div class="highlight"><pre><code class="c language-c" data-lang="c"><span class="cm">/* hello world demo */</span>
+<span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre><code class="lisp language-lisp" data-lang="lisp"><span class="c1">;;; this is a fibonacci sequence</span>
+<span class="p">(</span><span class="nv">define</span> <span class="p">(</span><span class="nv">fib</span> <span class="nv">n</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">cond</span> <span class="p">((</span><span class="nb">=</span> <span class="nv">n</span> <span class="mi">0</span><span class="p">)</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">((</span><span class="nb">=</span> <span class="nv">n</span> <span class="mi">1</span><span class="p">)</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">(</span><span class="nv">else</span> <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nv">fib</span> <span class="p">(</span><span class="nb">-</span> <span class="nv">n</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="nv">fib</span> <span class="p">(</span><span class="nb">-</span> <span class="nv">n</span> <span class="mi">2</span><span class="p">))))))</span>
+</code></pre></div>
+<p>$$
+    x + y
+$$</p>
+
+<p>参考：</p>
+
 <ul>
-    
-  
-
-
-  
-    
-      
-      	
-      	<li><a href="/internet/2013-08/support-pygments-in-jekyll.html">Jekyll 中的语法高亮：Pygments</a></li>
-      	
-      
-    
-  
-
-
-
-
+<li><a href="http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/">http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/</a></li>
 </ul>
- 
-<h2 id="example-ref">example</h2>
-<ul>
-    
-  
-
-
-  
-    
-      
-      	
-      	<li><a href="/example/2014-04/this-is-example.html">这是一篇示例文章</a></li>
-      	
-      
-    
-  
-
-
-
-
-</ul>
-
-
-
-          </article>
-
-          <aside class="col-md-3 visible-lg visible-md">
-                        <section>
-        <h4>Categories</h4>
-        <div class="tag_box">
-          <ul>
+</div>
+    <div class="cc">
+      <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">
+        <img title="署名-非商业性使用-相同方式共享 4.0 国际" src="/assets/images/CC.png" alt="License"></img>
+      </a>
+    </div>
+    <div class="row status">
+      <div class="col-md-6">
+        <div class="btn-group">
           
+          <a class="btn btn-primary btn-sm disabled">&laquo; Prev</a>
           
+          <a class="btn btn-primary btn-sm" href="/archive.html">Archive</a>
+          
+          <a class="btn btn-primary btn-sm" href="/example/2014-04/this-is-example.html" title="这是一篇示例文章">Next &raquo;</a>
+          
+        </div>
+      </div>
+      <div class="col-md-6 visible-lg visible-md">
+      
 
-
-  
-     
-    	<li><a href="/categories.html#internet-ref">
-    		internet <span>1</span>
-    	</a></li>
-     
-    	<li><a href="/categories.html#example-ref">
-    		example <span>1</span>
-    	</a></li>
+      </div>
+    </div>
     
-  
 
- 
-          </ul>
-        </div>
-      </section>
+  </article>
 
-
-            <section>
-        <h4>Recently Posts</h4>
-        <ul>
-        
-          <li><a href="/example/2014-04/this-is-example.html">这是一篇示例文章</a></li>
-        
-          <li><a href="/internet/2013-08/support-pygments-in-jekyll.html">Jekyll 中的语法高亮：Pygments</a></li>
-        
-        </ul>
-      </section>
-
-
-            
-
-
-            
-
-
-            
-
-
-          </aside>
-
-        </div>
+</div>
 
 
       </div>
