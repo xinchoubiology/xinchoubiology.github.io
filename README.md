@@ -1,4 +1,5 @@
-xinchoubiology.github.io
-========================
+USE **[Jekyll-Bootstrap](http://jekyllbootstrap.com/)** and **[Twitter-Bootstrap](http://twitter.github.com/bootstrap/)**.
 
-xinchoubiology's new static blog repository
+### Licenses:
+
+[MIT](http://opensource.org/licenses/MIT)

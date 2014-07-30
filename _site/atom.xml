@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>macrobellevue</title>
+  <link href="//atom.xml" rel="self"/>
+  <link href=""/>
+  <updated>2014-07-30T17:39:58+08:00</updated>
+  <id></id>
+  <author>
+    <name>XIN ZHOU</name>
+  </author>
+
+  
+  <entry>
+    <title>这是一篇示例文章</title>
+    <link href="/example/2014-04/this-is-example.html"/>
+    <updated>2014-04-17T00:00:00+08:00</updated>
+    <id>/example/2014-04/this-is-example</id>
+    <content type="html">示例标题
+示例代码库
+
+
+
+
+
+头1
+头2
+头3
+
+
+
+行1
+行1
+行1
+
+
+行2
+行2
+行2
+
+
+</content>
+  </entry>
+  
+
+</feed>

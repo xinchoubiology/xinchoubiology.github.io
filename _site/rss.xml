@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <channel>
+    <title>macrobellevue</title>
+    <description>A blog focus on algorithm of structure and genomics</description>
+    <link>/rss.xml</link>
+    <lastBuildDate>Wed, 30 Jul 2014 17:39:58 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Jul 2014 17:39:58 +0800</pubDate>
+    <ttl>1800</ttl>
+
+    
+    <item>
+      <title><![CDATA[这是一篇示例文章]]></title>
+      <description>&lt;h3&gt;示例标题&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;示例代码库
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;头1&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;头2&lt;/th&gt;
+&lt;th&gt;头3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;行1&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;行1&lt;/td&gt;
+&lt;td&gt;行1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;行2&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;行2&lt;/td&gt;
+&lt;td&gt;行2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</description>
+      <link>/example/2014-04/this-is-example.html</link>
+      <guid>/example/2014-04/this-is-example</guid>
+      <pubDate>Thu, 17 Apr 2014 00:00:00 +0800</pubDate>
+    </item>
+    
+  </channel>
+</rss>
