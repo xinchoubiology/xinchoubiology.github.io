@@ -98,6 +98,32 @@ $$
     x + y
 $$
 
+```mathjax
+    S = \frac{1}{2} a b \sin\gamma \\
+    a^2+b^2-2ab\cos\gamma = c^2 \\
+    \cos\gamma = \frac{a^2+b^2-c^2}{2ab}
+    S = \frac{1}{2} a b \sqrt{1-(\frac{a^2+b^2-c^2}{2ab})^2} \\
+    = \frac{1}{2}\sqrt{\frac{4a^2b^2-(a^2+b^2-c^2)^2}{4}} \\
+    = \frac{1}{4}\sqrt{(2ab-(a^2+b^2-c^2))(2ab+(a^2+b^2-c^2)} \\
+    = \frac{1}{4}\sqrt{(c^2-(a-b)^2)((a+b)^2-c^2)} \\
+    = \frac{1}{4}\sqrt{(c-a+b)(c+a-b)(a+b-c)(a+b+c)} \\
+    a+b+c = 2\rho \\
+    = \frac{1}{4}\sqrt{(2\rho-2a)(2\rho-2b)(2\rho-2c)2\rho} \\
+    = \sqrt{(\rho-a)(\rho-b)(\rho-c)\rho} \\
+```
+
+> 内切圆
+
+```mathjax
+    S = \frac{1}{2}(2r\alpha+2r\beta+2r\gamma); \\
+    \rho = \alpha + \beta + \gamma; \\
+    同时，S = \frac{1}{2}r(a+b+c) = r\rho \\
+    r^2\rho^2 = (\rho-a)(\rho-b)(\rho-c)\rho \\
+    r^2\rho = (\rho-a)(\rho-b)(\rho-c) \\
+    r = \sqrt{\frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}} -- 内心 \\
+    \frac{S_o}{S_t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{}
+```
+
 参考：
 
 * [http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/](http://truongtx.me/2012/12/28/jekyll-bootstrap-syntax-highlighting/)
