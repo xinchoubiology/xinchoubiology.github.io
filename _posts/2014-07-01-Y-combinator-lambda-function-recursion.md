@@ -79,14 +79,14 @@ tags: [lambda_calculus, recursion, combinator]
 
 >  基石 - $\lambda \ Calculus$: 
 
-*  我們首先從函數開始說起，函數是一個數學中非常基本的概念，例如，如果我們希望能夠使用從變量到值的mapping的時候，我們一般把他寫成 $$f：x \mapsto x - y$$ 的形式，但是，這裏我們給函數賦予的「函數名」f 是必須的嗎？ 顯然，過多的特殊標註會導致我們在使用高階函數的時候帶來混亂，這也就是Church的標註發的好處了。我們ignore每一個函數的函數名稱，取而代之的是輔助符號$$\lambda$$, 因為本身函數表達的從變量到值的映射按理來說其實本身就代表了自己，根本不需要使用函數名來做annotation。這也可以說我們是把 $$x \mapsto x - y$$ 整體當作是函數名字了。如此，我們就可以吧上面的這個f 和 g分別定義做：
+*  我們首先從函數開始說起，函數是一個數學中非常基本的概念，例如，如果我們希望能夠使用從變量到值的mapping的時候，我們一般把他寫成 $f：x \mapsto x - y$ 的形式，但是，這裏我們給函數賦予的「函數名」f 是必須的嗎？ 顯然，過多的特殊標註會導致我們在使用高階函數的時候帶來混亂，這也就是Church的標註發的好處了。我們ignore每一個函數的函數名稱，取而代之的是輔助符號$\lambda$, 因為本身函數表達的從變量到值的映射按理來說其實本身就代表了自己，根本不需要使用函數名來做annotation。這也可以說我們是把 $x \mapsto x - y$ 整體當作是函數名字了。如此，我們就可以吧上面的這個f 和 g分別定義做：
 
 $$
-	f = \lambda x. x-y    \qquad \qquad g = \lambda y. x - y \\
-	\equiv  \\
-	f(0) = 0-y   \qquad \qquad  g(0) = x-0 \\
-	我們再lambda \ notation 裏面寫作：\\
-	((\lambda x.x-y) 0)   \qquad \qquad  ((\lambda y.x-y) 0)\\
+	f = \lambda x. x-y    \qquad \qquad g = \lambda y. x - y \\\
+	\equiv  \\\
+	f(0) = 0-y   \qquad \qquad  g(0) = x-0 \\\
+	我們再lambda \ notation 裏面寫作：\\\
+	((\lambda x.x-y) 0)   \qquad \qquad  ((\lambda y.x-y) 0) \\\
 $$
 
 使用lambda表達最大的好處主要在於描述高階函數，例如上面的 f , g 實際上可以看作是來自於 $$h(x, y) = x - y$$ 函數的marginal function，所以，如果我們使用lambda notation 的話，一切都會變得簡單起來。
