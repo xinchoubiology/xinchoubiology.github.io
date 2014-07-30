@@ -26,7 +26,9 @@ tags: [lambda_calculus, recursion, combinator]
 
 結果如下圖：
 
- ![right-split einstein](/assets/images/2014/07/right-split.png) ; 原諒我使用偉大的 Einstein 來做這個例子的說明，只是因為好像Library作者們似乎比較喜歡這位？ 
+ ![right-split einstein](/assets/images/2014/07/right-split.png) 
+
+ 原諒我使用偉大的 Einstein 來做這個例子的說明，只是因為好像Library作者們似乎比較喜歡這位？ 
 
  同理，我們也可以用類似的叠代思想來表示 `up-split` 過程：
 
@@ -46,7 +48,9 @@ tags: [lambda_calculus, recursion, combinator]
 
  結果是這樣的：
 
- ![up-split einstein](/assets/images/2014/07/up-split.png) ; 從Einstein分裂的走時來看，我們已經可以發現 `below`, `beside` 的組合先後順序似乎決定了painter的組合方式的所有。
+ ![up-split einstein](/assets/images/2014/07/up-split.png) 
+
+ 從Einstein分裂的走時來看，我們已經可以發現 `below`, `beside` 的組合先後順序似乎決定了painter的組合方式的所有。
 
  從上面兩個例子我們就可以看出來，實際上，這個 `[direction]-split` procedure 本質上都是split 叠代的向 identity picture 上面組合疊加的函數，所以，我們受到上面的 `right-split`,	 `up-split` 的影響，進一步希望製作抽象procedure歸納出所有方向上的`split`函數。
 
@@ -552,9 +556,11 @@ $$
 
 在DrRacket中的結果：
 
-<div>
+<!--<div>
 	<img src="/assets/images/2014/07/Y-combinator.png" width="600" height="400" style="center;">
-</div>
+</div>-->
+
+ ![Y-combinator](/assets/images/2014/07/Y-combinator.png) 
 
 
 > Conclusion:
