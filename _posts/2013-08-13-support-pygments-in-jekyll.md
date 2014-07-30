@@ -132,6 +132,7 @@ $$
 > 我们基于海伦公式找到了园的内心
 
 $$
+    中文可以吗？
     \frac{S\_o}{S\_t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{\rho}
 $$
 
