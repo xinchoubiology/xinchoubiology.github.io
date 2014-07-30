@@ -125,7 +125,7 @@ $$
 		\lambda x.\lambda y.ab\lambda z.z = (\lambda x. (\lambda y. ((ab)\lambda z.z))) \\\
 	$$
 
-	+ 再來個Currying 定義： `$\lambda x_1x_2...x_n. M = (\lambda x_1. (\lambda x_2. (... (\lambda x_n. M))))$`。
+	+ 再來個Currying 定義： $\lambda x_1x_2...x_n. M = (\lambda x_1. (\lambda x_2. (... (\lambda x_n. M))))$。
 
 * 語法全等：
 	+ lambda terms的語法全等寫作： $M \equiv N$ 
