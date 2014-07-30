@@ -95,7 +95,8 @@ int main(int argc, char **argv)
 ```
 
 $$
-    x + y
+    x + y \\
+    S = \frac{1}{2} a b \sin\gamma \\
 $$
 
 $$
