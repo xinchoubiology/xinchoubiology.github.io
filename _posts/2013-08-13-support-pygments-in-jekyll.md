@@ -117,6 +117,7 @@ $$
 
 $$
     S = \frac{1}{2}(2r\alpha+2r\beta+2r\gamma); \\\
+    \rho = \alpha + \beta + \gamma; \\\
 $$
 
 参考：
