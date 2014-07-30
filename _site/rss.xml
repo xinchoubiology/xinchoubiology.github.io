@@ -4,8 +4,8 @@
     <title>macrobellevue</title>
     <description>A blog focus on algorithm of structure and genomics</description>
     <link>/rss.xml</link>
-    <lastBuildDate>Wed, 30 Jul 2014 22:44:31 +0800</lastBuildDate>
-    <pubDate>Wed, 30 Jul 2014 22:44:31 +0800</pubDate>
+    <lastBuildDate>Wed, 30 Jul 2014 23:02:08 +0800</lastBuildDate>
+    <pubDate>Wed, 30 Jul 2014 23:02:08 +0800</pubDate>
     <ttl>1800</ttl>
 
     
@@ -111,21 +111,22 @@ int main(int argc, char **argv)
             &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;$$
-    x + y
+    x + y 
 $$&lt;/p&gt;
 
 &lt;p&gt;$$
-    S = \frac{1}{2} a b \sin\gamma \
-    a^2+b^2-2ab\cos\gamma = c^2 \
+    S = \frac{1}{2} a b \sin\gamma \\
+    S = \frac{1}{2} a b \sin\gamma \\
+    a^2+b^2-2ab\cos\gamma = c^2 \\
     \cos\gamma = \frac{a^2+b^2-c^2}{2ab}
-    S = \frac{1}{2} a b \sqrt{1-(\frac{a^2+b^2-c^2}{2ab})^2} \
-    = \frac{1}{2}\sqrt{\frac{4a^2b^2-(a^2+b^2-c^2)^2}{4}} \
-    = \frac{1}{4}\sqrt{(2ab-(a^2+b^2-c^2))(2ab+(a^2+b^2-c^2)} \
-    = \frac{1}{4}\sqrt{(c^2-(a-b)^2)((a+b)^2-c^2)} \
-    = \frac{1}{4}\sqrt{(c-a+b)(c+a-b)(a+b-c)(a+b+c)} \
-    a+b+c = 2\rho \
-    = \frac{1}{4}\sqrt{(2\rho-2a)(2\rho-2b)(2\rho-2c)2\rho} \
-    = \sqrt{(\rho-a)(\rho-b)(\rho-c)\rho} \
+    S = \frac{1}{2} a b \sqrt{1-(\frac{a^2+b^2-c^2}{2ab})^2} \\
+    = \frac{1}{2}\sqrt{\frac{4a^2b^2-(a^2+b^2-c^2)^2}{4}} \\
+    = \frac{1}{4}\sqrt{(2ab-(a^2+b^2-c^2))(2ab+(a^2+b^2-c^2)} \\
+    = \frac{1}{4}\sqrt{(c^2-(a-b)^2)((a+b)^2-c^2)} \\
+    = \frac{1}{4}\sqrt{(c-a+b)(c+a-b)(a+b-c)(a+b+c)} \\
+    a+b+c = 2\rho \\
+    = \frac{1}{4}\sqrt{(2\rho-2a)(2\rho-2b)(2\rho-2c)2\rho} \\
+    = \sqrt{(\rho-a)(\rho-b)(\rho-c)\rho} \\
 $$&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -133,13 +134,13 @@ $$&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;$$
-    S = \frac{1}{2}(2r\alpha+2r\beta+2r\gamma); \
-    \rho = \alpha + \beta + \gamma; \
-    同时，S = \frac{1}{2}r(a+b+c) = r\rho \
-    r^2\rho^2 = (\rho-a)(\rho-b)(\rho-c)\rho \
-    r^2\rho = (\rho-a)(\rho-b)(\rho-c) \
-    r = \sqrt{\frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}} -- 内心 \
-    \frac{S&lt;em&gt;o}{S&lt;/em&gt;t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{}
+    S = \frac{1}{2}(2r\alpha+2r\beta+2r\gamma); \\
+    \rho = \alpha + \beta + \gamma; \\
+    同时，S = \frac{1}{2}r(a+b+c) = r\rho \\
+    r^2\rho^2 = (\rho-a)(\rho-b)(\rho-c)\rho \\
+    r^2\rho = (\rho-a)(\rho-b)(\rho-c) \\
+    r = \sqrt{\frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}} -- 内心 \\
+    \frac{S&lt;em&gt;o}{S&lt;/em&gt;t} = \frac{\pi \frac{(\rho-a)(\rho-b)(\rho-c)}{\rho}}{\sqrt{(\rho-a)(\rho-b)(\rho-c)\rho}} = \frac{\pi \sqrt{(\rho-a)(\rho-b)(\rho-c)}}{\rho}
 $$&lt;/p&gt;
 
 &lt;p&gt;参考：&lt;/p&gt;
