@@ -562,7 +562,7 @@ $$
 
  ![Y-combinator](/assets/images/2014/07/Y-combinator.png) 
 
-
+-----------
 > Conclusion:
 
 從這個東西裏面，其他的我也說不出啥來了。。總是就是。。python 2.x 裏面的這個lambda 函數好差勁啊，完全沒有起到lambda 函數值真正作用。因為似乎，python 裏面的lambda 函數只允許嵌套一個表達式？因為在Dive into python他們是這麽說的：『总的来说，lambda 函数可以接收任意多个参数 (包括可选参数) 并且返回单个表达式的值。lambda 函数不能包含命令，包含的表达式不能超过一个。不要试图向 lambda 函数中塞入太多的东西；如果你需要更复杂的东西，应该定义一个普通函数，然后想让它多长就多长。』,如果這樣的話，python裏面的lambda就只是匿名函數而已了，這樣顯得能力遠遠不如真正的lambda 表達式。
@@ -571,6 +571,7 @@ $$
 
 Over
 
+-------------
 > Reference:
 
 1. [Dive into python](http://woodpecker.org.cn/diveintopython/power_of_introspection/lambda_functions.html)
