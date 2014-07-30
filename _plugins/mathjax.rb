@@ -16,6 +16,10 @@ class HTMLwithAlbino < Redcarpet::Render::HTML
       code.gsub!(/^\$/,'')
       code.gsub!(/\$$/,'')
       "<script type=\"math/tex\">#{code}</script>"
+    elsif code[0] == "`" && code[-1] == "`"
+      code.gsub!(/^`/,'')
+      code.gsub!(/\`$/,'')
+      "<script type=\"math/tex\">#{code}</script>"
     else
       "<code>#{code}</code>"
     end
