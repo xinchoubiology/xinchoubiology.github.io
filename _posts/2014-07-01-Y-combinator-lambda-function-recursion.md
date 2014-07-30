@@ -89,25 +89,25 @@ $$
 	((\lambda x.x-y) 0)   \qquad \qquad  ((\lambda y.x-y) 0) \\\
 $$
 
-使用lambda表達最大的好處主要在於描述高階函數，例如上面的 f , g 實際上可以看作是來自於 $$h(x, y) = x - y$$ 函數的marginal function，所以，如果我們使用lambda notation 的話，一切都會變得簡單起來。
+使用lambda表達最大的好處主要在於描述高階函數，例如上面的 f , g 實際上可以看作是來自於 $h(x, y) = x - y$ 函數的marginal function，所以，如果我們使用lambda notation 的話，一切都會變得簡單起來。
 
-* 首先， 映射被表示做了 $$(x,y) \mapsto x - y$$, 我們使用lambda symbol之後，寫作: $$\lambda xy. x - y$$，那麽再問，單參數函數和多參數函數的區分是有必要的嗎？ 如果我們使用 $$\lambda xy$$ 的形式的話，我們要輸入的參數就不是單變量了而是pairs，這顯然不是必要的，我們完全可以把二元（多元）函數看作是一個參數是函數的函數，於是我們把上面的函數改寫做：
+* 首先， 映射被表示做了 $(x,y) \mapsto x - y$, 我們使用lambda symbol之後，寫作: $$\lambda xy. x - y$$，那麽再問，單參數函數和多參數函數的區分是有必要的嗎？ 如果我們使用 $\lambda xy$ 的形式的話，我們要輸入的參數就不是單變量了而是pairs，這顯然不是必要的，我們完全可以把二元（多元）函數看作是一個參數是函數的函數，於是我們把上面的函數改寫做：
 
 $$
-	x \mapsto (y \mapsto x - y)   \Rightarrow \lambda x.(\lambda y. x - y) \\
+	x \mapsto (y \mapsto x - y)   \Rightarrow \lambda x.(\lambda y. x - y) 
 $$
 
 如果我們給這個匿名函數一個名字叫$$h^*$$, 的話，我們發現原來的 $$h(x, y) \rightarrow (h^*(x))(y) $$ 。 換句話說，我們把一個以數的函數映射成一個函數的函數，也就是我們常常說的「高階函數」（high-order function）。
 
-我們把這種將多參數函數轉化成單參數的高階函數的過程，叫做Currying(柯裏化)。寫作 $$((\lambda xy. x - y) x y) \equiv (((\lambda x. (lambda y. x - y)) a) b)$$.
+我們把這種將多參數函數轉化成單參數的高階函數的過程，叫做Currying(柯裏化)。寫作 $$((\lambda xy. x - y) x y) \equiv (((\lambda x. (\lambda y. x - y)) a) b)$$.
 
 * &lambda; Calculus 的形式化
 
-($$\lambda$$ Terms): 
+> ($\lambda$ Terms): 
 
-* 我們有一個無窮的字符串集合，我們叫他『變量』，同時還有一個字符串結合叫做『原子常量』，原子常量可能是有限集合，無限集合或者空集合。 但是Atomic constant只針對applied lambda calculus討論，我們目前主要考慮pure lambda calculus的話，$$Atomic\ Constant \equiv \oslash $$。So，$$\lambda \ term$$ 定義如下：
+* 我們有一個無窮的字符串集合，我們叫他『變量』，同時還有一個字符串結合叫做『原子常量』，原子常量可能是有限集合，無限集合或者空集合。 但是Atomic constant只針對applied lambda calculus討論，我們目前主要考慮pure lambda calculus的話，$$Atomic\ Constant \equiv \oslash $$。So，$\lambda \ term$ 定義如下：
 
-	+ 所有的變量 $v_0, v_{000}$, ... 都是lambda 項；
+	+ 所有的變量 $v\_0, v\_{000}$, ... 都是lambda 項；
 	+ 如果M和N是lambda 項的話，那麽（MN）也是lambda 項 （Called Application）；
 	+ 如果M是lambda 項，x是任意變量，那麽 $\lambda x. M$ 也是一個lambda 項。
 
@@ -116,16 +116,16 @@ $$
 	+ Lambda 項是左結合的，f, x, y 都是 lambda term的話，那麽 f x y = （f x）y
 	+ 如 $\lambda x. M$ 我們稱之為函數抽象，因為這個形式如果M是一個實際上對應函數的函數體，例如x+2
 	+ 我們使用 小寫字母來表示lambda term中的`變量`，同時使用大寫字母（M，N，P，Q ...）來表示對應的lambda term。
-	+ lambda 項都是左結合的：例如，((((MN))P)Q) 我們就可以寫作 MNPQ, 此時parentheses 可以被忽略。同時，$\lambda x.$ 作為一個聲明，是不能單獨存在的。
+	+ lambda 項都是左結合的：例如，$((((MN))P)Q)$ 我們就可以寫作 MNPQ, 此時parentheses 可以被忽略。同時，$\lambda x.$ 作為一個聲明，是不能單獨存在的。
 	+ 幾個例子：
 
 	$$
-		\lambda x.\lambda y. yxab = (\lambda x. (\lambda y. (((yx)a)b))) \\
-		(\lambda x.\lambda y.yx)ab = (((\lambda x.(\lambda y.(yx)))a)b) \\
-		\lambda x.\lambda y.ab\lambda z.z = (\lambda x. (\lambda y. ((ab)\lambda z.z))) \\
+		\lambda x.\lambda y. yxab = (\lambda x. (\lambda y. (((yx)a)b))) \\\
+		(\lambda x.\lambda y.yx)ab = (((\lambda x.(\lambda y.(yx)))a)b) \\\
+		\lambda x.\lambda y.ab\lambda z.z = (\lambda x. (\lambda y. ((ab)\lambda z.z))) \\\
 	$$
 
-	+ 再來個Currying 定義： $\lambda x_1x_2...x_n. M = (\lambda x_1. (\lambda x_2. (... (\lambda x_n. M))))$。
+	+ 再來個Currying 定義： `$\lambda x_1x_2...x_n. M = (\lambda x_1. (\lambda x_2. (... (\lambda x_n. M))))$`。
 
 * 語法全等：
 	+ lambda terms的語法全等寫作： $M \equiv N$ 
