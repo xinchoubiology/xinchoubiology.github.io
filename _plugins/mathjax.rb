@@ -15,7 +15,7 @@ class HTMLwithAlbino < Redcarpet::Render::HTML
     if code[0] == "$" && code[-1] == "$"
       code.gsub!(/^\$/,'')
       code.gsub!(/\$$/,'')
-      "<span><script type=\"math/tex\">#{code}</script></span>"
+      "<script type=\"math/tex\">#{code}</script>"
     else
       "<code>#{code}</code>"
     end
