@@ -196,23 +196,23 @@ if  \ M \equiv\_{\alpha} M', N \equiv\_{\alpha} N', \\\
 我們可以得到：[N/x]M \equiv\_{\alpha} [N'/x]M'
 $$ 
 
-從上面這個推論，證明了我們在之前尋找z替換ovrlaped FV的lambda term的原因了。
+從上面這個推論，證明了我們在之前尋找z替換overlapped FV的lambda term的原因了。
 
 * $\beta$ 規約：
 對於形如：$(\lambda x. M)N$的 lambda term，我們把他稱之為 $\beta$ 可約式，對應的term是：$[N/x]M$ 其實也就是說，我們可以把
 
 $$
-	(\lambda x. M)N \vartriangleright_{1\beta} [N/x]M
+	(\lambda x. M)N \vartriangleright\_{1\beta} [N/x]M
 $$
 
-如果P經過有限步被規約到了Q，我們就說，$P \vartriangleright_{\beta} Q$.
+如果P經過有限步被規約到了Q，我們就說，$P \vartriangleright\_{\beta} Q$.
 
 如此一來，我們就有一個很有意思的例子在這裏會出現了。。大家注意：
 
 $$
-	(\lambda x. x x)(\lambda x. x x) \vartriangleright_{1\beta} [\lambda x. x x/x](x x) \equiv (\lambda x. x x)(\lambda x. x x)  ... \\
-	(\lambda x. x x y)(\lambda x. x x y) \vartriangleright_{1\beta} [\lambda x. x x y/x](x x y) \equiv (\lambda x. x x y)(\lambda x. x x y) y \rightarrow \\
-	((\lambda x. x x y)(\lambda x. x x y)) y [Notice 左結合]  \equiv \\
+	(\lambda x. x x)(\lambda x. x x) \vartriangleright_{1\beta} [\lambda x. x x/x](x x) \equiv (\lambda x. x x)(\lambda x. x x)  ... \\\
+	(\lambda x. x x y)(\lambda x. x x y) \vartriangleright_{1\beta} [\lambda x. x x y/x](x x y) \equiv (\lambda x. x x y)(\lambda x. x x y) y \rightarrow \\\
+	((\lambda x. x x y)(\lambda x. x x y)) y [Notice 左結合]  \equiv \\\
 	(\lambda x. x x y)(\lambda x. x x y) y y ...
 $$
 
@@ -220,11 +220,11 @@ $$
 
  1. 如果一個lambda term不含有&beta; 可規約想的話, 稱為&beta; 範式。
 
- 2. 如果 $P \vartriangleright_{\beta} Q$， 拿我們說Q是P的&beta; 範式。
+ 2. 如果 $P \vartriangleright\_{\beta} Q$， 拿我們說Q是P的&beta; 範式。
 
  3. 顯然，當我們的lambda term中存在不止一個可規約項的時候，我們可能就存在多重不同的規約鏈(先後順序)，如此的花，不同的規約是否達到的是等價的結果呢？
  
- Church Rosser 定理告訴我們實際上如果P確定有範式的話，那麽我們不同規約順序得到的範式$M \equiv_{\alpha} N$。
+ Church Rosser 定理告訴我們實際上如果P確定有範式的話，那麽我們不同規約順序得到的範式$M \equiv\_{\alpha} N$。
  
  但是我們如何確定我們使用的規約chain一定能收斂到存在的範式上呢？ 這裏我們又要做出一個定義，就是我們的P總是規約最左，最外側的&beta; 可規約式開始，我們把這種規約方式叫做`正則序`。這種方式一定能達到如果存在的&beta; 範式。
 
@@ -262,30 +262,30 @@ $$
 
 * Exercise: 
 $$
-[x].u(vx) \rightarrow S([x].u)([x].vx) = S(Ku)(S([x].v)([x].x)) \\ 
+[x].u(vx) \rightarrow S([x].u)([x].vx) = S(Ku)(S([x].v)([x].x)) \\\ 
 = S(Ku)(S(Kv)I)
 $$
 
-* Define ： $[x_1, ... x_n]. M = [x_1].([x_2].(...([x_n].M)...)) $ 
+* Define ： $[x\_1, ... x\_n]. M = [x\_1].([x\_2].(...([x\_n].M)...)) $ 
 
 所以，一個例子，例如我們希望能夠完成一個swap的定義：$\lambda x. \lambda y. y x = [x, y]. y x$, 所以我們來擴展這個swap 算子：
 
 $$
-	[x, y] y x \\
-	= [x]. ([y]. y x) \\
-	= [x]. (S([y]. y)([y]. x)) = [x]. (SI(Kx))  \\
-	= S([x].SI)([x].Kx) \\
-	= S(S([x].S)([x].I)) K \\
+	[x, y] y x \\\
+	= [x]. ([y]. y x) \\\
+	= [x]. (S([y]. y)([y]. x)) = [x]. (SI(Kx))  \\\
+	= S([x].SI)([x].Kx) \\\
+	= S(S([x].S)([x].I)) K \\\
 	= S(S(KS)(KI))K
 $$
 
 我們來證明combinator 是不是具有swap之功效呢？
 
 $$
-	(S(S(KS)(KI))K)xy = \\
-	= (S(S(KS)(KI))K \ x) \ y  \\
-	= ((S(KS)(KI))x \ Kx)\ y  \\
-	= ((KS)x\ (KI)x\ Kx)\ y  \\
+	(S(S(KS)(KI))K)xy = \\\
+	= (S(S(KS)(KI))K \ x) \ y  \\\
+	= ((S(KS)(KI))x \ Kx)\ y  \\\
+	= ((KS)x\ (KI)x\ Kx)\ y  \\\
 	= (S I Kx) y = Iy \ Kxy = yx   
 $$
 
@@ -433,14 +433,14 @@ Usage：
 
 既然對於值型函數我們存在了關於x = f(x) 的不動點，那麽如果這裏的x變成是一個函數 f(x) 的話呢？顯然我們不應該再設置一個threshold了，這個東西對於函數層次似乎不合適。
 
-先定義 $\beta \ reduction$，如果 $$P \equiv_{\beta} Q $$, 那麽我們就可以說，當且僅當P可以在有限的步驟（也可以是0）內  $$\vartriangleright_{n\beta}$$ 到 Q，或者是進行 $$\alpha \ transform $$  到Q。
+先定義 $\beta \ reduction$，如果 $P \equiv_{\beta} Q $, 那麽我們就可以說，當且僅當P可以在有限的步驟（也可以是0）內  $\vartriangleright\_{n\beta}$ 到 Q，或者是進行 $\alpha \ transform $  到Q。
 
 如此，我們可以考慮一個Y combinator： $\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x))$, 有了這個Y-combinator之後的話，我們可以發現：
 
 $$
-	YF = (\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x)))F \\
-	=     (\lambda x. F(x\ x))\ (\lambda x. F(x\ x)) \\
-	= F((\lambda x. F(x\ x))\  (\lambda x. F(x\ x)) ) \\
+	YF = (\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x)))F \\\
+	=     (\lambda x. F(x\ x))\ (\lambda x. F(x\ x)) \\\
+	= F((\lambda x. F(x\ x))\  (\lambda x. F(x\ x)) ) \\\
 	= F(YF)
 $$
 
@@ -448,10 +448,10 @@ $$
 
 
 $$
-	g \equiv \lambda f. \lambda n. (if (= \ n\ 0) 1 (*\ n\ (f \ (-\ n\ 1))))    \qquad \qquad 單一階乘定義 \\
-	所以我們發現 Y-combinator \ 的幫助下我們可以得到 : \\
-	Yg = g\ Yg  \\
-	所以，Yg\ n = g \ Yg \ n = (* n\ Yg (- n \ 1)) \\
+	g \equiv \lambda f. \lambda n. (if (= \ n\ 0) 1 (*\ n\ (f \ (-\ n\ 1))))    \qquad \qquad 單一階乘定義 \\\
+	所以我們發現 Y-combinator \ 的幫助下我們可以得到 : \\\
+	Yg = g\ Yg  \\\
+	所以，Yg\ n = g \ Yg \ n = (* n\ Yg (- n \ 1)) \\\
 $$
 
 
