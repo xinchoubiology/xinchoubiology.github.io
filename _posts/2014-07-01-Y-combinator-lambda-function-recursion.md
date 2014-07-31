@@ -192,7 +192,7 @@ $$
 順便，從$\alpha$ 等價關係中我們可以得到一個關於替換裏面的解釋：
 
 $$
-if  \ M \equiv_{\alpha} M', N \equiv_{\alpha} N', \\
+if  \ M \equiv_{\alpha} M', N \equiv_{\alpha} N', \\\
 我們可以得到：[N/x]M \equiv_{\alpha} [N'/x]M'
 $$ 
 
