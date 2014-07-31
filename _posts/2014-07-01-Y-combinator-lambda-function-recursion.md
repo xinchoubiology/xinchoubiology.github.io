@@ -408,7 +408,7 @@ Usage：
 
 > 也就是不存在$\beta \ normalization$ 的項，無論如何歸於都是自身的幾個 Lambda Term：
 
-* 首先我們先來看遞歸函數可以理解成的定義是：$f_n = F(f_{n-1})$，從這個地方看，正好和我們之前討論的Fix-point的$x = f(x)$ 是一致的，也就說說，我們這裏是要尋找一個函數F的不動點，正好就是我們要不斷叠代的f。 
+* 首先我們先來看遞歸函數可以理解成的定義是：$f\_n = F(f\_{n-1})$，從這個地方看，正好和我們之前討論的Fix-point的$x = f(x)$ 是一致的，也就說說，我們這裏是要尋找一個函數F的不動點，正好就是我們要不斷叠代的f。 
 
 * 關於數值函數的Fix-point:  $x = f(x)$:
 	
@@ -433,7 +433,7 @@ Usage：
 
 既然對於值型函數我們存在了關於x = f(x) 的不動點，那麽如果這裏的x變成是一個函數 f(x) 的話呢？顯然我們不應該再設置一個threshold了，這個東西對於函數層次似乎不合適。
 
-先定義 $\beta \ reduction$，如果 $P \equiv_{\beta} Q $, 那麽我們就可以說，當且僅當P可以在有限的步驟（也可以是0）內  $\vartriangleright\_{n\beta}$ 到 Q，或者是進行 $\alpha \ transform $  到Q。
+先定義 $\beta \ reduction$，如果 $P \equiv\_{\beta} Q $, 那麽我們就可以說，當且僅當P可以在有限的步驟（也可以是0）內  $\vartriangleright\_{n\beta}$ 到 Q，或者是進行 $\alpha \ transform $  到Q。
 
 如此，我們可以考慮一個Y combinator： $\lambda f. ((\lambda x. g(x\ x)) \lambda x. g(x\ x))$, 有了這個Y-combinator之後的話，我們可以發現：
 
@@ -444,14 +444,14 @@ $$
 	= F(YF)
 $$
 
-有了上面的這個定義，就暗示了我們如果我們設計一個合理的F的話，YF 就要可以不斷的被F所嵌套產生 $F(F...(YF))$, 一旦再結合合適的終止條件分支的話，我們就可以藉助 Y combinator完成  recursion。
+有了上面的這個定義，就暗示了我們如果我們設計一個合理的F的話，YF 就要可以不斷的被F所嵌套產生 $F(F...(YF))$, 一旦再結合合適的終止條件分支的話，我們就可以藉助 Y combinator 完成  recursion。
 
 
 $$
-	g \equiv \lambda f. \lambda n. (if (= \ n\ 0) 1 (*\ n\ (f \ (-\ n\ 1))))    \qquad \qquad 單一階乘定義 \\\
+	g \equiv \lambda f. \lambda n. (if (= \ n\ 0) 1 (\* \ n\ (f \ (-\ n\ 1))))    \qquad \qquad 單一階乘定義 \\\
 	所以我們發現 Y-combinator \ 的幫助下我們可以得到 : \\\
 	Yg = g\ Yg  \\\
-	所以，Yg\ n = g \ Yg \ n = (* n\ Yg (- n \ 1)) \\\
+	所以，Yg\ n = g \ Yg \ n = (\* n\ Yg (- n \ 1)) \\\
 $$
 
 
