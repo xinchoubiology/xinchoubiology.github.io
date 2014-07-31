@@ -180,7 +180,7 @@ $$
 如此，我們可以得到下面這個$\alpha 全等$表達：
 
 $$
-\lambda x. M \equiv_\alpha \lambda y. [y/x]M \\
+\lambda x. M \equiv_\alpha \lambda y. [y/x]M \\\
 [(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)]; \\
 $$
 
