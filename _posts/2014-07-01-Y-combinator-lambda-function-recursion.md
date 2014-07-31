@@ -211,7 +211,7 @@ $$
 
 $$
 	(\lambda x. x x)(\lambda x. x x) \vartriangleright\_{1\beta} [\lambda x. x x/x](x x) \equiv (\lambda x. x x)(\lambda x. x x)  ... \\\
-	(\lambda x. x x y)(\lambda x. x x y) \vartriangleright_{1\beta} [\lambda x. x x y/x](x x y) \equiv (\lambda x. x x y)(\lambda x. x x y) y \rightarrow \\\
+	(\lambda x. x x y)(\lambda x. x x y) \vartriangleright\_{1\beta} [\lambda x. x x y/x](x x y) \equiv (\lambda x. x x y)(\lambda x. x x y) y \rightarrow \\\
 	((\lambda x. x x y)(\lambda x. x x y)) y [Notice 左結合]  \equiv \\\
 	(\lambda x. x x y)(\lambda x. x x y) y y ...
 $$
