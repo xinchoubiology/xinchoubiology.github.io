@@ -211,6 +211,9 @@ $$
 
 $$
 	(\lambda x. x x)(\lambda x. x x) \vartriangleright\_{1\beta} \[\lambda x. x x/x\](x x) \equiv (\lambda x. x x)(\lambda x. x x)  ... \\\
+	(\lambda x. x x y)(\lambda x. x x y) \vartriangleright\_{1\beta} \[\lambda x. x x y/x\](x x y) \equiv (\lambda x. x x y)(\lambda x. x x y) y \rightarrow \\\
+	((\lambda x. x x y)(\lambda x. x x y)) y \[Notice 左結合\]  \equiv \\\
+	(\lambda x. x x y)(\lambda x. x x y) y y ...
 $$
 
  似乎規約的結果和沒規約一樣, 甚至會出現了越reduce越長的效果。這是好事還是壞事呢？ 至少，我們可以瞭解到，不同的lambda term規約的結果不一定是朝著simplify的方向前進。
