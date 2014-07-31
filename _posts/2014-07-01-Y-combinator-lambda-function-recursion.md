@@ -172,7 +172,7 @@ $$
 
 $$
 	[(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)] \\\
-	FV(N) = \left\{x\right\}, FV(P) = \left\{x\right\} + \oslash = \left\{x\right\},  \Rightarrow
+	FV(N) = \left{x\right}, FV(P) = \left{x\right} + \oslash = \left{x\right},  \Rightarrow
 $$
 
 * $\alpha$ 變換和等價：
