@@ -171,7 +171,8 @@ $$
 試舉一例： 
 
 $$
-	\lambda x.\lambda y. yxab = (\lambda x. (\lambda y. (((yx)a)b))) \\\
+	[(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)] \\\
+	FV(N) = \left\{x\right\}, FV(P) = \left\{x\right\} + \oslash = \left\{x\right\},  \Rightarrow
 $$
 
 * $\alpha$ 變換和等價：
@@ -180,8 +181,7 @@ $$
 如此，我們可以得到下面這個$\alpha 全等$表達：
 
 $$
-\lambda x. M \equiv_\alpha \lambda y. [y/x]M \\\
-[(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)]
+\lambda x. M \equiv_\alpha \lambda y. [y/x]M \\
 $$
 
 這是一個「自反」，「對稱」，「傳遞」的過程(這個證明還是容易的)，自然了，這就是我們說的等價關係了。
