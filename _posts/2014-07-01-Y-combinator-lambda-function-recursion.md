@@ -171,14 +171,8 @@ $$
 試舉一例： 
 
 $$
-	\[(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)\]; \\\
-	
+	\lambda x.\lambda y. yxab = (\lambda x. (\lambda y. (((yx)a)b))) \\\
 $$
-
-FV(N) = \left\{x\right\}, FV(P) = \left\{x\right\} + \oslash = \left\{x\right\},  \Rightarrow \\\
-\lambda y. [(\lambda y. xy) / x]  x(\lambda x. x) =  \\\ 
-\lambda y. ([(\lambda y. xy) / x] x)([(\lambda y. xy) / x] \lambda x. x) = \\\
-\lambda y. (\lambda y. xy)(\lambda x. x) \\\
 
 * $\alpha$ 變換和等價：
 
