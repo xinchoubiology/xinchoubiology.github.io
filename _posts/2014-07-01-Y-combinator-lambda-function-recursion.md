@@ -180,7 +180,8 @@ $$
 如此，我們可以得到下面這個$\alpha 全等$表達：
 
 $$
-\lambda x. M \equiv_\alpha \lambda y. [y/x]M
+\lambda x. M \equiv_\alpha \lambda y. [y/x]M \\
+[(\lambda y. xy) / x] [\lambda y. x(\lambda x. x)]; \\
 $$
 
 這是一個「自反」，「對稱」，「傳遞」的過程(這個證明還是容易的)，自然了，這就是我們說的等價關係了。
